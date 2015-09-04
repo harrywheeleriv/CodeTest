@@ -53,18 +53,29 @@ def repeatIndex(dictionary):
     seenRepeats_add = seenRepeats.add
     return [ indexRepeats for indexRepeats, word in enumerate(dictionary) if word in seenRepeats or seenRepeats_add(word)]
 
-def fileRead():
+def fileRead(directory=None):
     """
-        Reads in the dictionary file that contains one word per line,. Keeps the words that are purely alphabetical and longer than four characters and returns them.
+        Reads in the dictionary file that contains one word per line. Keeps the words that are purely alphabetical and longer than four characters and returns them.
         
     """
-
-    if sys.platform == 'win32':
-        #I use a windows machine at home.
-        wordsDirectory = 'D:\\Research\\CodingTest\\usr\\'
-        wordsFile = 'words.txt'
-        fullNameAndPath= wordsDirectory + wordsFile
-
+    if directory == None:
+        if sys.platform == 'win32':
+            #I use a windows machine at home and this is where I put my words.txt
+            wordsDirectory = 'D:\\Research\\CodingTest\\usr\\'
+            wordsFile = 'words.txt'
+            fullNameAndPath= wordsDirectory + wordsFile
+        elif sys.platform == 'darwin':
+            wordsDirectory = '/usr/share/dict/words/'
+            wordsFile = 'words'
+        elif sys.platform == 'linux2':
+            wordsDirectory = '/usr/dict/words/'
+            wordsFile = 'words'
+    else:
+        if (directory[-1] != '\\') or (directory[-1] != '/'):
+            fullNameAndPath = directory + '/' + 'words'
+        else:
+            fullNameAndPath = directory + 'words'
+        
     fourLetters = []
     with open(fullNameAndPath,'U') as rawfile:
 
@@ -111,6 +122,7 @@ if __name__ == "__main__":
     import os
     import sys
 
+    directory = None
 
     # read in files
     dictionary = fileRead()
