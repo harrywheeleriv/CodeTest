@@ -10,12 +10,12 @@ HOW TO RUN
 
 If the locations of words file is specific as well as the output location:
 
-python anagrampy.py wordsDirectory outputDirectory
+	python anagrampy.py wordsDirectory outputDirectory
 
 If you want to have it output the file where the script is located, don't specify outputDirectory:
 
-python anagrampy.py wordsDirectory
+	python anagrampy.py wordsDirectory
 
 If using a mac or linux, then just run:
 
-python anagrampy.py
+	python anagrampy.py
