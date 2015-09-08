@@ -8,7 +8,7 @@ On Line 69 and 79, the directory of the dictionary can written in if you're usin
 HOW TO RUN
 ----------
 
-If the locations of words file is specific as well as the output location:
+If the location of words file needs to be specific as well as the output location:
 
 	python anagrampy.py wordsDirectory outputDirectory
 
@@ -19,3 +19,7 @@ If you want to have it output the file where the script is located, don't specif
 If using a mac or linux, then just run:
 
 	python anagrampy.py
+
+For the last option, the script assumes:
+- On Mac, words is in '/usr/share/dict/words/'
+- On Linux, words is in '/usr/dict/words/'
