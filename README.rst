@@ -18,9 +18,7 @@ If using a mac or linux, then just run:
 
 	python anagrampy.py
 
-For the last option, the script assumes:
-- On Mac, words is in '/usr/share/dict/words/'
-- On Linux, words is in '/usr/dict/words/'
+For the last option, the script assumes if you're using a Mac, words is in '/usr/share/dict/words/'. If your using Linux, words is in '/usr/dict/words/'.
 
 
 NOTES
