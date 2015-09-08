@@ -1,8 +1,6 @@
-Creates an output file with a collection of anagrams found in a one word per line dictionary where the number of anagramsis atleast as many letters in the anagram. The word must be larger than 4 letters as well.
+Creates an output file with a collection of anagrams found in a one word per line dictionary where the number of anagrams is atleast as many letters in the anagram. The word must be larger than 4 letters as well.
 
 The underlying assumption is that the anagrams will be identical when all of their letters are sorted into alphabetical order.
-
-On Line 69 and 79, the directory of the dictionary can written in if you're using Windows and the function fileRead cannot find the file 'words'
 
 
 HOW TO RUN
@@ -23,3 +21,8 @@ If using a mac or linux, then just run:
 For the last option, the script assumes:
 - On Mac, words is in '/usr/share/dict/words/'
 - On Linux, words is in '/usr/dict/words/'
+
+
+NOTES
+-----
+On Line 69 and 79, the directory of the dictionary can be written in if you're using Windows and the function fileRead cannot find the file 'words'.
